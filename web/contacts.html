@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Star Trek Hotel | Customer Home </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+    <script type="text/javascript" src="js/jquery-1.6.js"></script>
+    <script type="text/javascript" src="js/cufon-yui.js"></script>
+    <script type="text/javascript" src="js/cufon-replace.js"></script>
+    <script type="text/javascript" src="js/Adamina_400.font.js"></script>
+    <script type="text/javascript" src="js/jquery.jqtransform.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/atooltip.jquery.js"></script>
+
+</head>
+
+<body id="page5">
+    <div class="bg1">
+        <div class="bg2">
+
+            <div class="bg1">
+                <div class="bg2">
+                    <div class="main">
+                        <!-- header -->
+                        <header>
+                            <h1><a href="index.jsp" id="logo">STAR TREK HOTEL</a></h1>
+                            <div class="department">
+                                <span><a class="scroll" href="login.jsp">LOGIN IN</a>
+               <a class="scroll" href="signin.jsp">New Customer?</a>
+               <a class="scroll" href="history.jsp">View Order History</a></span>
+
+                                <div id="welcome">
+                                    <div id="logout"></div>
+                                    <a href="login.jsp?state=logout">logout</a>
+                                </div>
+                            </div>
+
+                            <script type="text/javascript">
+                                $(document).ready(function() {
+                                    $.post(
+                                        "/HotelSystem/getloginfo", {
+                                            "state": "sessioninfo"
+                                        },
+                                        function(data) {
+                                            if (data == "@-@") {
+                                                $("#log").show();
+                                                $("#welcome").hide();
+                                            } else {
+                                                var username = data.split("@-@")[0];
+                                                var type = data.split("@-@")[1];
+                                                $("#log").hide();
+                                                $("#welcome").show();
+                                                $("#logout").html("<p>" + username + "</p>");
+                                            }
+
+                                        },
+                                        "text");
+
+                                });
+                            </script>
+
+
+                        </header>
+
+                        <div class="box">
+                            <nav>
+                                <ul id="menu">
+                                    <li class="active"><a href="index.jsp">HOME</a></li>
+                                    <li><a href="diningPreorder.jsp">DINING</a></li>
+                                    <li><a href="roomPreorder.jsp">ROOM</a></li>
+                                    <li><a href="contacts.html">CONTACT</a></li>
+                                </ul>
+                            </nav>
+                            <!-- header end -->
+                            <!-- header end -->
+                            <!-- content -->
+                            <article id="content">
+
+                                <div class="pad">
+                                    <h2>Our Contacts</h2>
+                                    <div class="line2">
+                                        <div class="wrapper line3">
+                                            <div class="col1">
+                                                <p class="pad_bot1"><strong class="color2">USA</strong></p>
+                                                <p class="pad_bot1">4629 Bayard St </p>
+                                                <p class="cols"> Freephone:
+                                                    <br> Telephone:
+                                                    <br> Fax:
+                                                    <br> Email:
+                                                </p>
+                                                +1 800 888 8888
+                                                <br> +1 800 111 1111
+                                                <br> +1 800 222 2222
+                                                <br>
+                                                <a href="#" class="color1">SThotel@sthotel.com</a> </div>
+                                            <div class="col1 pad_left1">
+                                                <p class="pad_bot1"><strong class="color2">China</strong></p>
+                                                <p class="pad_bot1">GuGong Beijing</p>
+                                                <p class="cols"> Freephone:
+                                                    <br> Telephone:
+                                                    <br> Fax:
+                                                    <br> Email:
+                                                </p>
+                                                +1 612613
+                                                <br> +1 332313
+                                                <br> +1 488937
+                                                <br>
+                                                <a href="#" class="color1">SThotel@sthotel.com</a> </div>
+                                            <div class="col1 pad_left1">
+                                                <p class="pad_bot1"><strong class="color2">Japan</strong></p>
+                                                <p class="pad_bot1">Tyoko Park</p>
+                                                <p class="cols"> Freephone:
+                                                    <br> Telephone:
+                                                    <br> Fax:
+                                                    <br> Email:
+                                                </p>
+                                                +1 1211231
+                                                <br> +1 213123
+                                                <br> +1 2131321
+                                                <br>
+                                                <a href="#" class="color1">SThotel@sthotel.com</a> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <!--content end-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <!-- footer -->
+                <footer>
+                    <nav>
+                        <ul id="footer_menu">
+                            <li><a href="index.jsp">Home</a></li>
+                            <li><a href="diningPreorder.jsp">Dining</a></li>
+                            <li><a href="roomPreorder.jsp">Booking</a></li>
+                            <li><a href="contacts.html">Contact Us</a></li>
+                            <li class="last active"><a href="contacts.html">Locations</a></li>
+                        </ul>
+                    </nav>
+            </div>
+            <div class="col1 pad_left1">
+                <ul id="icons">
+                    <li>
+                        <a href="#" class="normaltip"><img src="images/icon1.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#" class="normaltip"><img src="images/icon2.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#" class="normaltip"><img src="images/icon3.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#" class="normaltip"><img src="images/icon4.jpg" alt=""></a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <script type="text/javascript">
+        Cufon.now();
+    </script>
+</body>
+
+</html>
