@@ -4,6 +4,7 @@
 
 ##INTRODUCTION##
 For the purpose of fulfilling the services, we are going to create a robust website system to support our customers and staffs. This Online Reservation and Management System (ORMS) comprises two main subsystems, including Hotel Reservation Systems and Management Systems.
+
 **Hotel Reservation Systems**
 Designed for customers to book rooms or dinning tables on the internet in advance.
 
